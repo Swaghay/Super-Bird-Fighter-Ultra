@@ -9,7 +9,7 @@ import SpriteKit
 import GameplayKit
 
 //pog
-
+//poggers
 class GameScene: SKScene {
     var Right_Arrow = SKSpriteNode()
     var Platform = SKSpriteNode(color: UIColor.red, size: CGSize(width: 900, height: 100))
