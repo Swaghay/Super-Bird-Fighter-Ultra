@@ -14,10 +14,6 @@
 		76E35FA0254719FA00726ADA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E35F9F254719FA00726ADA /* GameViewController.swift */; };
 		76E35FA3254719FA00726ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FA1254719FA00726ADA /* Main.storyboard */; };
 		76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FA4254719FD00726ADA /* Assets.xcassets */; };
-		76E35FAE25471B7500726ADA /* LeftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FAD25471B7500726ADA /* LeftArrow.png */; };
-		76E35FB125471C2600726ADA /* RightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FB025471C2600726ADA /* RightArrow.png */; };
-		76E35FB425471C3200726ADA /* Chickette_with_skirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FB325471C3200726ADA /* Chickette_with_skirt.png */; };
-		76E35FB725471C3800726ADA /* Chickette.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FB625471C3700726ADA /* Chickette.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +26,6 @@
 		76E35FA2254719FA00726ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76E35FA4254719FD00726ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76E35FA6254719FD00726ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76E35FAD25471B7500726ADA /* LeftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LeftArrow.png; path = ../../../../Downloads/LeftArrow.png; sourceTree = "<group>"; };
-		76E35FB025471C2600726ADA /* RightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RightArrow.png; path = ../../../../Downloads/RightArrow.png; sourceTree = "<group>"; };
-		76E35FB325471C3200726ADA /* Chickette_with_skirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chickette_with_skirt.png; path = ../../../../Downloads/Chickette_with_skirt.png; sourceTree = "<group>"; };
-		76E35FB625471C3700726ADA /* Chickette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chickette.png; path = ../../../../Downloads/Chickette.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +58,6 @@
 		76E35F96254719FA00726ADA /* Chicken Fighter Ultra */ = {
 			isa = PBXGroup;
 			children = (
-				76E35FAD25471B7500726ADA /* LeftArrow.png */,
-				76E35FB625471C3700726ADA /* Chickette.png */,
-				76E35FB325471C3200726ADA /* Chickette_with_skirt.png */,
-				76E35FB025471C2600726ADA /* RightArrow.png */,
 				76E35F97254719FA00726ADA /* AppDelegate.swift */,
 				76E35F99254719FA00726ADA /* GameScene.sks */,
 				76E35F9B254719FA00726ADA /* Actions.sks */,
@@ -139,11 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E35FAE25471B7500726ADA /* LeftArrow.png in Resources */,
 				76E35FA3254719FA00726ADA /* Main.storyboard in Resources */,
-				76E35FB125471C2600726ADA /* RightArrow.png in Resources */,
-				76E35FB425471C3200726ADA /* Chickette_with_skirt.png in Resources */,
-				76E35FB725471C3800726ADA /* Chickette.png in Resources */,
 				76E35F9A254719FA00726ADA /* GameScene.sks in Resources */,
 				76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */,
 				76E35F9C254719FA00726ADA /* Actions.sks in Resources */,
