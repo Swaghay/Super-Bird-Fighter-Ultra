@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76E35F98254719FA00726ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E35F97254719FA00726ADA /* AppDelegate.swift */; };
+		76E35F9A254719FA00726ADA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E35F99254719FA00726ADA /* GameScene.sks */; };
+		76E35F9C254719FA00726ADA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E35F9B254719FA00726ADA /* Actions.sks */; };
+		76E35F9E254719FA00726ADA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E35F9D254719FA00726ADA /* GameScene.swift */; };
+		76E35FA0254719FA00726ADA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E35F9F254719FA00726ADA /* GameViewController.swift */; };
+		76E35FA3254719FA00726ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FA1254719FA00726ADA /* Main.storyboard */; };
+		76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FA4254719FD00726ADA /* Assets.xcassets */; };
+		76E35FAE25471B7500726ADA /* LeftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FAD25471B7500726ADA /* LeftArrow.png */; };
+		76E35FB125471C2600726ADA /* RightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FB025471C2600726ADA /* RightArrow.png */; };
+		76E35FB425471C3200726ADA /* Chickette_with_skirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FB325471C3200726ADA /* Chickette_with_skirt.png */; };
+		76E35FB725471C3800726ADA /* Chickette.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FB625471C3700726ADA /* Chickette.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		76E35F94254719FA00726ADA /* Chicken Fighter Ultra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken Fighter Ultra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E35F97254719FA00726ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76E35F99254719FA00726ADA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		76E35F9B254719FA00726ADA /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		76E35F9D254719FA00726ADA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		76E35F9F254719FA00726ADA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		76E35FA2254719FA00726ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76E35FA4254719FD00726ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76E35FA6254719FD00726ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E35FAD25471B7500726ADA /* LeftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LeftArrow.png; path = ../../../../Downloads/LeftArrow.png; sourceTree = "<group>"; };
+		76E35FB025471C2600726ADA /* RightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RightArrow.png; path = ../../../../Downloads/RightArrow.png; sourceTree = "<group>"; };
+		76E35FB325471C3200726ADA /* Chickette_with_skirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chickette_with_skirt.png; path = ../../../../Downloads/Chickette_with_skirt.png; sourceTree = "<group>"; };
+		76E35FB625471C3700726ADA /* Chickette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chickette.png; path = ../../../../Downloads/Chickette.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76E35F91254719FA00726ADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76E35F8B254719FA00726ADA = {
+			isa = PBXGroup;
+			children = (
+				76E35F96254719FA00726ADA /* Chicken Fighter Ultra */,
+				76E35F95254719FA00726ADA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76E35F95254719FA00726ADA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76E35F94254719FA00726ADA /* Chicken Fighter Ultra.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76E35F96254719FA00726ADA /* Chicken Fighter Ultra */ = {
+			isa = PBXGroup;
+			children = (
+				76E35FAD25471B7500726ADA /* LeftArrow.png */,
+				76E35FB625471C3700726ADA /* Chickette.png */,
+				76E35FB325471C3200726ADA /* Chickette_with_skirt.png */,
+				76E35FB025471C2600726ADA /* RightArrow.png */,
+				76E35F97254719FA00726ADA /* AppDelegate.swift */,
+				76E35F99254719FA00726ADA /* GameScene.sks */,
+				76E35F9B254719FA00726ADA /* Actions.sks */,
+				76E35F9D254719FA00726ADA /* GameScene.swift */,
+				76E35F9F254719FA00726ADA /* GameViewController.swift */,
+				76E35FA1254719FA00726ADA /* Main.storyboard */,
+				76E35FA4254719FD00726ADA /* Assets.xcassets */,
+				76E35FA6254719FD00726ADA /* Info.plist */,
+			);
+			path = "Chicken Fighter Ultra";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76E35F93254719FA00726ADA /* Chicken Fighter Ultra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76E35FA9254719FD00726ADA /* Build configuration list for PBXNativeTarget "Chicken Fighter Ultra" */;
+			buildPhases = (
+				76E35F90254719FA00726ADA /* Sources */,
+				76E35F91254719FA00726ADA /* Frameworks */,
+				76E35F92254719FA00726ADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chicken Fighter Ultra";
+			productName = "Chicken Fighter Ultra";
+			productReference = 76E35F94254719FA00726ADA /* Chicken Fighter Ultra.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76E35F8C254719FA00726ADA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					76E35F93254719FA00726ADA = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 76E35F8F254719FA00726ADA /* Build configuration list for PBXProject "Chicken Fighter Ultra" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76E35F8B254719FA00726ADA;
+			productRefGroup = 76E35F95254719FA00726ADA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76E35F93254719FA00726ADA /* Chicken Fighter Ultra */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76E35F92254719FA00726ADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E35FAE25471B7500726ADA /* LeftArrow.png in Resources */,
+				76E35FA3254719FA00726ADA /* Main.storyboard in Resources */,
+				76E35FB125471C2600726ADA /* RightArrow.png in Resources */,
+				76E35FB425471C3200726ADA /* Chickette_with_skirt.png in Resources */,
+				76E35FB725471C3800726ADA /* Chickette.png in Resources */,
+				76E35F9A254719FA00726ADA /* GameScene.sks in Resources */,
+				76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */,
+				76E35F9C254719FA00726ADA /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76E35F90254719FA00726ADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E35F9E254719FA00726ADA /* GameScene.swift in Sources */,
+				76E35FA0254719FA00726ADA /* GameViewController.swift in Sources */,
+				76E35F98254719FA00726ADA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		76E35FA1254719FA00726ADA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76E35FA2254719FA00726ADA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76E35FA7254719FD00726ADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76E35FA8254719FD00726ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76E35FAA254719FD00726ADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83SNXZ87SM;
+				INFOPLIST_FILE = "Chicken Fighter Ultra/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnthonyKuismi.Chicken-Fighter-Ultra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76E35FAB254719FD00726ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83SNXZ87SM;
+				INFOPLIST_FILE = "Chicken Fighter Ultra/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnthonyKuismi.Chicken-Fighter-Ultra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76E35F8F254719FA00726ADA /* Build configuration list for PBXProject "Chicken Fighter Ultra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E35FA7254719FD00726ADA /* Debug */,
+				76E35FA8254719FD00726ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76E35FA9254719FD00726ADA /* Build configuration list for PBXNativeTarget "Chicken Fighter Ultra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E35FAA254719FD00726ADA /* Debug */,
+				76E35FAB254719FD00726ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76E35F8C254719FA00726ADA /* Project object */;
+}
