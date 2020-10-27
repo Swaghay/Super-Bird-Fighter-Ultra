@@ -12,8 +12,11 @@ import GameplayKit
 //poggers
 
 class GameScene: SKScene {
+    var x_direction = ""
+    var x_max_speed:CGFloat = 400
+    var x_acc:CGFloat = 40
     var Right_Arrow = SKSpriteNode()
-    var Platform = SKSpriteNode(color: UIColor.red, size: CGSize(width: 900, height: 100))
+    var Platform = SKSpriteNode(color: UIColor.clear, size: CGSize(width: 900, height: 100))
     var RightWall = SKSpriteNode(color: UIColor.red, size: CGSize(width: 100, height: 900))
     var LeftWall = SKSpriteNode(color: UIColor.red, size: CGSize(width: 100, height: 900))
     var Left_Arrow = SKSpriteNode()
@@ -42,6 +45,7 @@ class GameScene: SKScene {
         Player.physicsBody?.affectedByGravity = true
         Platform.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 900, height: 100))
         Platform.physicsBody?.affectedByGravity = false
+        Platform.physicsBody?.friction = 1
         Platform.physicsBody?.isDynamic = false
         Platform.position = CGPoint(x: 0, y: -200)
         RightWall.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 100, height: 900))
@@ -76,18 +80,29 @@ class GameScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in: self)
-        if Right_Arrow.contains(location) || !Right_Arrow.contains(location){
+        if Right_Arrow.contains(location){
             print("right end")
-           Right_Arrow.alpha = 1
+           x_direction = ""
+            Right_Arrow.alpha = 1
         }
-        if Left_Arrow.contains(location) || !Left_Arrow.contains(location){
+        if Left_Arrow.contains(location){
             print("left end")
-           Left_Arrow.alpha = 1
+            x_direction = ""
+            Left_Arrow.alpha = 1
+
         }
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
+        if x_direction == "right"{
+            if (Player.physicsBody?.velocity.dx)! < x_max_speed{
+                Player.physicsBody?.velocity.dx += x_acc
+            }
+        }else if x_direction == "left"{
+            if (Player.physicsBody?.velocity.dx)! > -x_max_speed{
+                Player.physicsBody?.velocity.dx -= x_acc
+            }
+        }
         
     }
     
@@ -98,13 +113,13 @@ class GameScene: SKScene {
                 if (self.Right_Arrow.contains(location)){
                     self.Right_Arrow.alpha = 0.5
                     print("right begin")
-                    self.Player.physicsBody?.applyImpulse(CGVector(dx: 50, dy: 0))
+                    self.x_direction = "right"
                 }
             }else  if node.name == "Left"{
                 if (self.Left_Arrow.contains(location)){
                     self.Left_Arrow.alpha = 0.5
                     print("left begin")
-                    self.Player.physicsBody?.applyImpulse(CGVector(dx: -50, dy: 0))
+                    self.x_direction = "left"
                 }
             }
         }
