@@ -10,9 +10,11 @@ import GameplayKit
 
 //pog
 //poggers
+
 class GameScene: SKScene {
     var Right_Arrow = SKSpriteNode()
     var Platform = SKSpriteNode(color: UIColor.red, size: CGSize(width: 900, height: 100))
+    var RightWall = SKSpriteNode(color: UIColor.red, size: CGSize(width: 100, height: 900))
     var Left_Arrow = SKSpriteNode()
     var Player = SKSpriteNode()
    
@@ -23,6 +25,7 @@ class GameScene: SKScene {
     
     func setup(){
         Platform.name = "Platform"
+        RightWall.name = "RightWall"
         Player.name = "Player"
         Right_Arrow.name = "Right"
         Left_Arrow.name = "Left"
@@ -39,6 +42,10 @@ class GameScene: SKScene {
         Platform.physicsBody?.affectedByGravity = false
         Platform.physicsBody?.isDynamic = false
         Platform.position = CGPoint(x: 0, y: -200)
+        RightWall.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 100, height: 900))
+        RightWall.physicsBody?.affectedByGravity = false
+        RightWall.physicsBody?.isDynamic = false
+        RightWall.position = CGPoint(x: 500, y: 0)
         Left_Arrow.size = buttonSize
         Left_Arrow.position = CGPoint(x: -300, y: -200)
         Right_Arrow.position = CGPoint(x: -200,y: -200)
@@ -46,6 +53,7 @@ class GameScene: SKScene {
         addChild(Player)
         addChild(Left_Arrow)
         addChild(Right_Arrow)
+        addChild(RightWall)
     }
     
    
