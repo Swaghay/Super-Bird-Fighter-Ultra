@@ -2,7 +2,7 @@
 //  MainMenu.swift
 //  Chicken Fighter Ultra
 //
-//  Created by 64004046 on 10/28/20.
+//  Created by Abhay Upadhyaya on 10/28/20.
 //
 
 import SwiftUI
@@ -10,8 +10,11 @@ import SwiftUI
 struct MainMenu: View {
     var body: some View {
         
-        Button(action: {
-            
+        Image("RightArrow")
+        
+        //SpriteKitContainer(scene: GameScene())
+        /*Button(action: {
+            print("abhay")
             
             
         }){
@@ -42,7 +45,7 @@ struct MainMenu: View {
         .frame(width: 50, height: 30)
     
     */
-        
+       */
     }
 }
 
