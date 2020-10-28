@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371ED2662549BCDD00A90272 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371ED2652549BCDD00A90272 /* MainMenu.swift */; };
 		76E35F98254719FA00726ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E35F97254719FA00726ADA /* AppDelegate.swift */; };
 		76E35F9A254719FA00726ADA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E35F99254719FA00726ADA /* GameScene.sks */; };
 		76E35F9C254719FA00726ADA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E35F9B254719FA00726ADA /* Actions.sks */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		371ED2652549BCDD00A90272 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		76E35F94254719FA00726ADA /* Chicken Fighter Ultra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken Fighter Ultra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E35F97254719FA00726ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76E35F99254719FA00726ADA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				76E35F99254719FA00726ADA /* GameScene.sks */,
 				76E35F9B254719FA00726ADA /* Actions.sks */,
 				76E35F9D254719FA00726ADA /* GameScene.swift */,
+				371ED2652549BCDD00A90272 /* MainMenu.swift */,
 				76E35F9F254719FA00726ADA /* GameViewController.swift */,
 				76E35FA1254719FA00726ADA /* Main.storyboard */,
 				76E35FA4254719FD00726ADA /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				76E35F9E254719FA00726ADA /* GameScene.swift in Sources */,
 				76E35FA0254719FA00726ADA /* GameViewController.swift in Sources */,
 				76E35F98254719FA00726ADA /* AppDelegate.swift in Sources */,
+				371ED2662549BCDD00A90272 /* MainMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
