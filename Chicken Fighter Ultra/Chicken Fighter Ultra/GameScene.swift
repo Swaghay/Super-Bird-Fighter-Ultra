@@ -124,20 +124,29 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        if x_direction != "" && Player.position.y < 0{
+            addEmiter(loc: CGPoint(x: Player.position.x, y: Player.position.y-CharacterSize.height/2), file: "PlayerWalkDust")
+        }
+
         if x_direction == "right"{
             if (Player.physicsBody?.velocity.dx)! < x_max_speed{
                 Player.physicsBody?.velocity.dx += x_acc
                 if (!isAnimate){
+                    self.Player.removeAllActions()
                     setTexture(folderName: "GooseWalk", sprite: Player, spriteName: "goose_walk",speed: 15)
+                    Player.xScale = 1
                     isAnimate = true
                 }
             }
-            
         }else if x_direction == "left"{
             if (Player.physicsBody?.velocity.dx)! > -x_max_speed{
                 Player.physicsBody?.velocity.dx -= x_acc
-                self.Player.removeAllActions()
-                isAnimate = false
+                if (!isAnimate){
+                    self.Player.removeAllActions()
+                    setTexture(folderName: "GooseWalk", sprite: Player, spriteName: "goose_walk",speed: 15)
+                    Player.xScale = -1
+                    isAnimate = true
+                }
             }
         }else {
             Player.removeAllActions()
@@ -181,4 +190,15 @@ class GameScene: SKScene {
            let animation = SKAction.animate(with: frames, timePerFrame: 1/speed)
            sprite.run(SKAction.repeatForever(animation))
        }
+    
+    func addEmiter(loc: CGPoint,file:String){
+        let emitter = SKEmitterNode(fileNamed: file)
+        emitter?.name = "emitter"
+        emitter?.zPosition = 2;
+        emitter?.position = CGPoint(x: loc.x, y: loc.y )
+        addChild(emitter!)
+        
+        emitter?.run(SKAction.sequence([
+            SKAction.wait(forDuration: 0.5),SKAction.removeFromParent()]))
+    }
 }

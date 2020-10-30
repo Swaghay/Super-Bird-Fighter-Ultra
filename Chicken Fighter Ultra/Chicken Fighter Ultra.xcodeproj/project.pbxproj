@@ -17,6 +17,7 @@
 		76E35FA3254719FA00726ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FA1254719FA00726ADA /* Main.storyboard */; };
 		76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E35FA4254719FD00726ADA /* Assets.xcassets */; };
 		76F6214E254B15C100703779 /* GooseWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 76F6214D254B15C100703779 /* GooseWalk.atlas */; };
+		76F62151254BB61800703779 /* PlayerWalkDust.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76F62150254BB61800703779 /* PlayerWalkDust.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		76E35FA4254719FD00726ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76E35FA6254719FD00726ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F6214D254B15C100703779 /* GooseWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = GooseWalk.atlas; path = ../../../../../Downloads/GooseWalk.atlas; sourceTree = "<group>"; };
+		76F62150254BB61800703779 /* PlayerWalkDust.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerWalkDust.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				76E35F99254719FA00726ADA /* GameScene.sks */,
 				76E35F9B254719FA00726ADA /* Actions.sks */,
 				76E35F9D254719FA00726ADA /* GameScene.swift */,
+				76F62150254BB61800703779 /* PlayerWalkDust.sks */,
 				371ED2652549BCDD00A90272 /* MainMenu.swift */,
 				768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */,
 				76E35F9F254719FA00726ADA /* GameViewController.swift */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E35FA3254719FA00726ADA /* Main.storyboard in Resources */,
+				76F62151254BB61800703779 /* PlayerWalkDust.sks in Resources */,
 				76E35F9A254719FA00726ADA /* GameScene.sks in Resources */,
 				76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */,
 				76E35F9C254719FA00726ADA /* Actions.sks in Resources */,
