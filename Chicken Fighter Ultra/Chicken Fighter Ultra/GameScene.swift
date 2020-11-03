@@ -24,7 +24,8 @@ class GameScene: SKScene {
     var Player = SKSpriteNode()
     let buttonSize = CGSize(width: 96 , height: 96)
     let CharacterSize = CGSize(width: 96 , height: 96)
-   
+    var Play_Button = SKSpriteNode()
+    
     override func didMove(to view: SKView) {
 
         setup()
@@ -36,7 +37,7 @@ class GameScene: SKScene {
         set_sizes()
         set_physics()
         set_positions()
-        addchildren()
+        setup_main_menu()
     }
     
     func set_names(){
@@ -46,7 +47,7 @@ class GameScene: SKScene {
         Player.name = "Player"
         Right_Arrow.name = "Right"
         Left_Arrow.name = "Left"
-
+        Play_Button.name = "PlayButton"
     }
     
     func set_textures(){
@@ -55,12 +56,14 @@ class GameScene: SKScene {
         set_filtering_mode(fileNamed: "goose_stand", node: Player)
         set_filtering_mode(fileNamed: "RightArrow", node: Right_Arrow)
         set_filtering_mode(fileNamed: "LeftArrow", node: Left_Arrow)
+        set_filtering_mode(fileNamed: "StartButton", node: Play_Button)
     }
     
     func set_sizes(){
         Right_Arrow.size = buttonSize
         Player.size = CharacterSize
         Left_Arrow.size = buttonSize
+        Play_Button.size = buttonSize
     }
     
     func set_physics(){
@@ -88,13 +91,20 @@ class GameScene: SKScene {
         RightWall.position = CGPoint(x: 435, y: 0)
     }
     
-    func addchildren(){
+    func setup_game_scene(){
+        self.removeAllChildren()
         addChild(Platform)
         addChild(Player)
         addChild(Left_Arrow)
         addChild(Right_Arrow)
         addChild(RightWall)
         addChild(LeftWall)
+    }
+    
+    
+    func setup_main_menu(){
+        self.removeAllChildren()
+        addChild(Play_Button)
     }
     
    
@@ -171,6 +181,11 @@ class GameScene: SKScene {
                     print("left begin")
                     self.x_direction = "left"
                     
+                }
+            }else if node.name == "PlayButton"{
+                if (self.Play_Button.contains(location)){
+                    print("start")
+                    self.setup_game_scene()
                 }
             }
         }
