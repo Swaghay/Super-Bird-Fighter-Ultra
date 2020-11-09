@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		371ED2662549BCDD00A90272 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371ED2652549BCDD00A90272 /* MainMenu.swift */; };
+		762361D02559A7E300654CE5 /* gooseflying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 762361CF2559A7E300654CE5 /* gooseflying.atlas */; };
 		768A2F0B2549C3C700121FBD /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */; };
 		76E35F98254719FA00726ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E35F97254719FA00726ADA /* AppDelegate.swift */; };
 		76E35F9A254719FA00726ADA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E35F99254719FA00726ADA /* GameScene.sks */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		371ED2652549BCDD00A90272 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		762361CF2559A7E300654CE5 /* gooseflying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = gooseflying.atlas; path = ../../../../../Desktop/gooseflying.atlas; sourceTree = "<group>"; };
 		768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
 		76E35F94254719FA00726ADA /* Chicken Fighter Ultra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken Fighter Ultra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E35F97254719FA00726ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		76E35F96254719FA00726ADA /* Chicken Fighter Ultra */ = {
 			isa = PBXGroup;
 			children = (
+				762361CF2559A7E300654CE5 /* gooseflying.atlas */,
 				76F6214D254B15C100703779 /* GooseWalk.atlas */,
 				76E35F97254719FA00726ADA /* AppDelegate.swift */,
 				76E35F99254719FA00726ADA /* GameScene.sks */,
@@ -139,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				762361D02559A7E300654CE5 /* gooseflying.atlas in Resources */,
 				76E35FA3254719FA00726ADA /* Main.storyboard in Resources */,
 				76F62151254BB61800703779 /* PlayerWalkDust.sks in Resources */,
 				76E35F9A254719FA00726ADA /* GameScene.sks in Resources */,

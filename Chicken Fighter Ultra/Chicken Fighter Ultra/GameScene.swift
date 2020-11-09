@@ -8,18 +8,21 @@
 import SpriteKit
 import GameplayKit
 import UIKit
-//pog
-//poggers
 
-class GameScene: SKScene {
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var x_direction = ""
     var isAnimate = false
+    var current_jumps = 0
+    var max_jumps = 2
+    var jump_velocity = 300
     var x_max_speed:CGFloat = 400
     var x_acc:CGFloat = 40
     var Right_Arrow = SKSpriteNode()
     var Platform = SKSpriteNode(color: UIColor.clear, size: CGSize(width: 900, height: 100))
     var RightWall = SKSpriteNode(color: UIColor.red, size: CGSize(width: 100, height: 900))
     var LeftWall = SKSpriteNode(color: UIColor.red, size: CGSize(width: 100, height: 900))
+    var jump_button = SKSpriteNode()
     var Left_Arrow = SKSpriteNode()
     var Player = SKSpriteNode()
     let buttonSize = CGSize(width: 96 , height: 96)
@@ -32,6 +35,7 @@ class GameScene: SKScene {
     }
     
     func setup(){
+        
         set_names()
         set_textures()
         set_sizes()
@@ -48,6 +52,7 @@ class GameScene: SKScene {
         Right_Arrow.name = "Right"
         Left_Arrow.name = "Left"
         Play_Button.name = "PlayButton"
+        jump_button.name = "JumpButton"
     }
     
     func set_textures(){
@@ -57,6 +62,7 @@ class GameScene: SKScene {
         set_filtering_mode(fileNamed: "RightArrow", node: Right_Arrow)
         set_filtering_mode(fileNamed: "LeftArrow", node: Left_Arrow)
         set_filtering_mode(fileNamed: "StartButton", node: Play_Button)
+        set_filtering_mode(fileNamed: "JumpButton", node: jump_button)
     }
     
     func set_sizes(){
@@ -64,9 +70,15 @@ class GameScene: SKScene {
         Player.size = CharacterSize
         Left_Arrow.size = buttonSize
         Play_Button.size = buttonSize
+        jump_button.size = buttonSize
     }
     
     func set_physics(){
+        
+        //bit mask of 1 for player
+        //bit mask of 2 for stuff like walls and platforms
+        
+        physicsWorld.contactDelegate = self
         RightWall.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 100, height: 900))
         RightWall.physicsBody?.affectedByGravity = false
         RightWall.physicsBody?.isDynamic = false
@@ -80,6 +92,14 @@ class GameScene: SKScene {
         Platform.physicsBody?.affectedByGravity = false
         Platform.physicsBody?.friction = 1
         Platform.physicsBody?.isDynamic = false
+        Platform.physicsBody?.categoryBitMask = 2
+        Platform.physicsBody?.contactTestBitMask = 1
+        Player.physicsBody?.categoryBitMask = 1
+        Player.physicsBody?.collisionBitMask = 2
+        Player.physicsBody?.contactTestBitMask = 2
+        
+        LeftWall.physicsBody?.categoryBitMask = 2
+        RightWall.physicsBody?.categoryBitMask = 2
     }
     
     func set_positions(){
@@ -89,6 +109,7 @@ class GameScene: SKScene {
         Left_Arrow.position = CGPoint(x: -300, y: -200)
         Right_Arrow.position = CGPoint(x: -200,y: -200)
         RightWall.position = CGPoint(x: 435, y: 0)
+        jump_button.position = CGPoint(x: 200, y: -200)
     }
     
     func setup_game_scene(){
@@ -99,6 +120,7 @@ class GameScene: SKScene {
         addChild(Right_Arrow)
         addChild(RightWall)
         addChild(LeftWall)
+        addChild(jump_button)
     }
     
     
@@ -131,6 +153,11 @@ class GameScene: SKScene {
             Left_Arrow.alpha = 1
 
         }
+        if jump_button.contains(location){
+            print("jump end")
+            jump_button.alpha = 1
+
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -158,6 +185,18 @@ class GameScene: SKScene {
                     isAnimate = true
                 }
             }
+        }else if Player.physicsBody?.velocity.dy != 0{
+            if x_direction == "left"{
+                Player.xScale = -1
+            }else{
+                Player.xScale = 1
+            }
+            if (!isAnimate){
+                self.Player.removeAllActions()
+                setTexture(folderName: "gooseflying", sprite: Player, spriteName: "goose_flying",speed: 15)
+                isAnimate = true
+            }
+            
         }else {
             Player.removeAllActions()
             isAnimate = false
@@ -187,6 +226,15 @@ class GameScene: SKScene {
                     print("start")
                     self.setup_game_scene()
                 }
+            }else if node.name == "JumpButton"{
+                if(self.jump_button.contains(location)){
+                    self.jump_button.alpha = 0.5
+                    print("jump")
+                    if self.current_jumps < self.max_jumps{
+                        self.current_jumps += 1
+                        self.Player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: self.jump_velocity))
+                    }
+                }
             }
         }
     }
@@ -215,5 +263,15 @@ class GameScene: SKScene {
         
         emitter?.run(SKAction.sequence([
             SKAction.wait(forDuration: 0.5),SKAction.removeFromParent()]))
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let nodeA = contact.bodyA.node
+        let nodeB = contact.bodyB.node
+        if nodeA!.name == "Player" && nodeB!.name == "Platform"{
+              current_jumps = 0
+        } else if nodeB!.name == "Player" && nodeA!.name == "Platform"{
+               current_jumps = 0
+        }
     }
 }
