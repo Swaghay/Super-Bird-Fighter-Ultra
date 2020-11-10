@@ -12,10 +12,11 @@ import UIKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var x_direction = ""
-    var isAnimate = false
+    var isWalk = false
+    var isFly = false
     var current_jumps = 0
     var max_jumps = 2
-    var jump_velocity = 300
+    var jump_velocity = 150
     var x_max_speed:CGFloat = 400
     var x_acc:CGFloat = 40
     var Right_Arrow = SKSpriteNode()
@@ -165,53 +166,58 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             addEmiter(loc: CGPoint(x: Player.position.x, y: Player.position.y-CharacterSize.height/2), file: "PlayerWalkDust")
         }
 
-        if x_direction == "right"{
+        if x_direction == "right" && !isFly{
             if (Player.physicsBody?.velocity.dx)! < x_max_speed{
                 Player.physicsBody?.velocity.dx += x_acc
-                if (!isAnimate){
+                if (!isWalk){
                     self.Player.removeAllActions()
                     setTexture(folderName: "GooseWalk", sprite: Player, spriteName: "goose_walk",speed: 15)
                     Player.xScale = 1
-                    isAnimate = true
+                    isWalk = true
                 }
             }
-        }else if x_direction == "left"{
+        }else if x_direction == "left" && !isFly{
             if (Player.physicsBody?.velocity.dx)! > -x_max_speed{
                 Player.physicsBody?.velocity.dx -= x_acc
-                if (!isAnimate){
+                if (!isWalk){
                     self.Player.removeAllActions()
                     setTexture(folderName: "GooseWalk", sprite: Player, spriteName: "goose_walk",speed: 15)
                     Player.xScale = -1
-                    isAnimate = true
+                    isWalk = true
                 }
             }
-        }else if Player.physicsBody?.velocity.dy != 0{
+        }else if (Player.physicsBody?.velocity.dy)! >= 5 && !isWalk{
             if x_direction == "left"{
                 Player.xScale = -1
+                print("Abhay left")
             }else{
                 Player.xScale = 1
+                print("Abhay right")
             }
-            if (!isAnimate){
+            if (!isFly){
                 self.Player.removeAllActions()
                 setTexture(folderName: "gooseflying", sprite: Player, spriteName: "goose_flying",speed: 15)
-                isAnimate = true
+                isWalk = false
+                isFly = true
             }
             
         }else {
             Player.removeAllActions()
-            isAnimate = false
+            isWalk = false
+            isFly = false
         }
         
     }
     
     func buttonPress(touch: UITouch){
-        enumerateChildNodes(withName: "//*") { (node, stop) in
+        enumerateChildNodes(withName: "//*") { [self] (node, stop) in
             let location = touch.location(in: self)
             if node.name == "Right"{
                 if (self.Right_Arrow.contains(location)){
                     self.Right_Arrow.alpha = 0.5
                     print("right begin")
                     self.x_direction = "right"
+                    self.isFly = false
                     
                 }
             }else  if node.name == "Left"{
@@ -219,6 +225,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.Left_Arrow.alpha = 0.5
                     print("left begin")
                     self.x_direction = "left"
+                    self.isFly = false
                     
                 }
             }else if node.name == "PlayButton"{
@@ -233,6 +240,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if self.current_jumps < self.max_jumps{
                         self.current_jumps += 1
                         self.Player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: self.jump_velocity))
+                        self.isWalk = false
                     }
                 }
             }
@@ -269,9 +277,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let nodeA = contact.bodyA.node
         let nodeB = contact.bodyB.node
         if nodeA!.name == "Player" && nodeB!.name == "Platform"{
-              current_jumps = 0
+            current_jumps = 0
+            isFly = false
         } else if nodeB!.name == "Player" && nodeA!.name == "Platform"{
-               current_jumps = 0
+            current_jumps = 0
+            isFly = false
         }
     }
 }
