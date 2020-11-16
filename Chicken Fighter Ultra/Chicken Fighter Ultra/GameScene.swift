@@ -16,7 +16,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isFly = false
     var current_jumps = 0
     var max_jumps = 2
-    var jump_velocity = 150
+    var backround = SKSpriteNode()
+    var jump_velocity = 250
     var x_max_speed:CGFloat = 400
     var x_acc:CGFloat = 40
     var Right_Arrow = SKSpriteNode()
@@ -64,6 +65,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         set_filtering_mode(fileNamed: "LeftArrow", node: Left_Arrow)
         set_filtering_mode(fileNamed: "StartButton", node: Play_Button)
         set_filtering_mode(fileNamed: "JumpButton", node: jump_button)
+        set_filtering_mode(fileNamed: "farmyard", node: backround)
     }
     
     func set_sizes(){
@@ -72,6 +74,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         Left_Arrow.size = buttonSize
         Play_Button.size = buttonSize
         jump_button.size = buttonSize
+        backround.size = CGSize(width: 1000, height: 800)
     }
     
     func set_physics(){
@@ -89,6 +92,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         LeftWall.physicsBody?.isDynamic = false
         Player.physicsBody = SKPhysicsBody(rectangleOf: CharacterSize)
         Player.physicsBody?.affectedByGravity = true
+        Player.physicsBody?.allowsRotation = false
         Platform.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 900, height: 100))
         Platform.physicsBody?.affectedByGravity = false
         Platform.physicsBody?.friction = 1
@@ -111,6 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         Right_Arrow.position = CGPoint(x: -200,y: -200)
         RightWall.position = CGPoint(x: 435, y: 0)
         jump_button.position = CGPoint(x: 200, y: -200)
+        backround.zPosition = -1
     }
     
     func setup_game_scene(){
@@ -122,6 +127,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(RightWall)
         addChild(LeftWall)
         addChild(jump_button)
+        addChild(backround)
     }
     
     
@@ -171,7 +177,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 Player.physicsBody?.velocity.dx += x_acc
                 if (!isWalk){
                     self.Player.removeAllActions()
-                    setTexture(folderName: "GooseWalk", sprite: Player, spriteName: "goose_walk",speed: 15)
+                    setTexture(folderName: "gooseMove", sprite: Player, spriteName: "goose_walk",speed: 100)
                     Player.xScale = 1
                     isWalk = true
                 }
@@ -181,7 +187,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 Player.physicsBody?.velocity.dx -= x_acc
                 if (!isWalk){
                     self.Player.removeAllActions()
-                    setTexture(folderName: "GooseWalk", sprite: Player, spriteName: "goose_walk",speed: 15)
+                    setTexture(folderName: "gooseMove", sprite: Player, spriteName: "goose_walk",speed: 100)
                     Player.xScale = -1
                     isWalk = true
                 }
@@ -253,7 +259,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
            for i in 0...textureAtlas.textureNames.count - 1{
                let name = "\(spriteName)\(i).png"
                let texture = SKTexture(imageNamed: name)
-               
                texture.filteringMode = SKTextureFilteringMode.nearest
                frames.append(texture)
            }
