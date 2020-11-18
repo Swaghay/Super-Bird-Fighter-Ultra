@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		371ED2662549BCDD00A90272 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371ED2652549BCDD00A90272 /* MainMenu.swift */; };
-		762361D02559A7E300654CE5 /* gooseflying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 762361CF2559A7E300654CE5 /* gooseflying.atlas */; };
+		767E3A5125657C5D00840448 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767E3A5025657C5D00840448 /* Character.swift */; };
 		768A2F0B2549C3C700121FBD /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */; };
 		76A070302562DB1700071C58 /* gooseMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 76A0702F2562DB1700071C58 /* gooseMove.atlas */; };
+		76C24C4125642DF10065B6D7 /* goose_flying_good.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 76C24C4025642DF10065B6D7 /* goose_flying_good.atlas */; };
 		76E35F98254719FA00726ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E35F97254719FA00726ADA /* AppDelegate.swift */; };
 		76E35F9A254719FA00726ADA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E35F99254719FA00726ADA /* GameScene.sks */; };
 		76E35F9C254719FA00726ADA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E35F9B254719FA00726ADA /* Actions.sks */; };
@@ -23,9 +24,10 @@
 
 /* Begin PBXFileReference section */
 		371ED2652549BCDD00A90272 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		762361CF2559A7E300654CE5 /* gooseflying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = gooseflying.atlas; path = ../../../../../Desktop/gooseflying.atlas; sourceTree = "<group>"; };
+		767E3A5025657C5D00840448 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
 		76A0702F2562DB1700071C58 /* gooseMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = gooseMove.atlas; path = ../../../../../Desktop/gooseMove.atlas; sourceTree = "<group>"; };
+		76C24C4025642DF10065B6D7 /* goose_flying_good.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = goose_flying_good.atlas; path = ../../../../../Desktop/goose_flying_good.atlas; sourceTree = "<group>"; };
 		76E35F94254719FA00726ADA /* Chicken Fighter Ultra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken Fighter Ultra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E35F97254719FA00726ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76E35F99254719FA00726ADA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -68,12 +70,13 @@
 		76E35F96254719FA00726ADA /* Chicken Fighter Ultra */ = {
 			isa = PBXGroup;
 			children = (
+				76C24C4025642DF10065B6D7 /* goose_flying_good.atlas */,
 				76A0702F2562DB1700071C58 /* gooseMove.atlas */,
-				762361CF2559A7E300654CE5 /* gooseflying.atlas */,
 				76E35F97254719FA00726ADA /* AppDelegate.swift */,
 				76E35F99254719FA00726ADA /* GameScene.sks */,
 				76E35F9B254719FA00726ADA /* Actions.sks */,
 				76E35F9D254719FA00726ADA /* GameScene.swift */,
+				767E3A5025657C5D00840448 /* Character.swift */,
 				76F62150254BB61800703779 /* PlayerWalkDust.sks */,
 				371ED2652549BCDD00A90272 /* MainMenu.swift */,
 				768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */,
@@ -142,9 +145,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				762361D02559A7E300654CE5 /* gooseflying.atlas in Resources */,
 				76E35FA3254719FA00726ADA /* Main.storyboard in Resources */,
 				76F62151254BB61800703779 /* PlayerWalkDust.sks in Resources */,
+				76C24C4125642DF10065B6D7 /* goose_flying_good.atlas in Resources */,
 				76E35F9A254719FA00726ADA /* GameScene.sks in Resources */,
 				76A070302562DB1700071C58 /* gooseMove.atlas in Resources */,
 				76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */,
@@ -162,6 +165,7 @@
 				768A2F0B2549C3C700121FBD /* SpriteKitContainer.swift in Sources */,
 				76E35F9E254719FA00726ADA /* GameScene.swift in Sources */,
 				76E35FA0254719FA00726ADA /* GameViewController.swift in Sources */,
+				767E3A5125657C5D00840448 /* Character.swift in Sources */,
 				76E35F98254719FA00726ADA /* AppDelegate.swift in Sources */,
 				371ED2662549BCDD00A90272 /* MainMenu.swift in Sources */,
 			);
@@ -303,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 883DK65VTV;
 				INFOPLIST_FILE = "Chicken Fighter Ultra/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,6 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 883DK65VTV;
 				INFOPLIST_FILE = "Chicken Fighter Ultra/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
