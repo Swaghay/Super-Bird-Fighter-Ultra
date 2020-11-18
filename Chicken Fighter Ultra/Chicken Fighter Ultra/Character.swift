@@ -88,10 +88,7 @@ class Character:SKSpriteNode{
      }
 
     public func update_character(){
-        if x_direction != "" && self.position.y < 0{
-            addEmiter(loc: CGPoint(x: self.position.x, y: self.position.y-CharacterSize.height/2), file: "PlayerWalkDust")
-        }
-
+      
         if x_direction == "right" && !isFly{
             if (self.physicsBody?.velocity.dx)! < x_max_speed{
                 self.physicsBody?.velocity.dx += x_acc

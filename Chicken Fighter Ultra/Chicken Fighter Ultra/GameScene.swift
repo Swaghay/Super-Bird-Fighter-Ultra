@@ -172,6 +172,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: TimeInterval) {
         Player.update_character()
+        if Player.x_direction != "" && Player.position.y < 0{
+            addEmiter(loc: CGPoint(x: Player.position.x, y: Player.position.y-Player.size.height/2), file: "PlayerWalkDust")
+        }
     }
     
     func buttonPress(touch: UITouch){
