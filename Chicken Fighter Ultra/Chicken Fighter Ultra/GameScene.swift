@@ -11,8 +11,18 @@ import UIKit
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
     var current_jumps = 0
+    var cn = 0
     var max_jumps = 2
+    var charbut1 = SKSpriteNode()
+    var charbut2 = SKSpriteNode()
+    var charbut3 = SKSpriteNode()
+    var charbut4 = SKSpriteNode()
+    var charback1 = SKSpriteNode(color: UIColor.yellow, size: CGSize(width: 150, height: 150))
+    var charback2 = SKSpriteNode(color: UIColor.yellow, size: CGSize(width: 150, height: 150))
+    var charback3 = SKSpriteNode(color: UIColor.yellow, size: CGSize(width: 150, height: 150))
+    var charback4 = SKSpriteNode(color: UIColor.yellow, size: CGSize(width: 150, height: 150))
     var backround = SKSpriteNode()
     var dummy = SKSpriteNode(color: UIColor.red, size: CGSize(width: 50, height: 50))
     var Punch_button = SKSpriteNode()
@@ -32,7 +42,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setup(){
-        Player.setvalues(jumps: 2, jump_vel: 300, max_x_speed: 200, acc: 200, size: CharacterSize)
+        Player.setvalues(jumps: 2, jump_vel: 200, max_x_speed: 200, acc: 200, size: CharacterSize)
+        Player.setAnimations(run_sprite: "goose_walk", run_folder: "gooseMove", fly_sprite:"goose_flying" , fly_folder: "goose_flying_good", attack_sprite: "", attack_folder: "")
         set_names()
         set_textures()
         set_sizes()
@@ -52,6 +63,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         jump_button.name = "JumpButton"
         Punch_button.name = "PunchButton"
         dummy.name = "dummy"
+        charbut1.name = "charbut1"
+        charbut2.name = "charbut2"
+        charbut3.name = "charbut3"
+        charbut4.name = "charbut4"
+        charback1.name = "charback1"
+        charback2.name = "charback2"
+        charback3.name = "charback3"
+        charback4.name = "charback4"
     }
     
     func set_textures(){
@@ -104,7 +123,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func set_positions(){
-        
+        Play_Button.position = CGPoint(x: 0, y: -200)
+        charback1.position = CGPoint(x: -200, y: 100)
+        charback1.zPosition = -1
+        charback2.position = CGPoint(x: 200, y: 100)
+        charback2.zPosition = -1
+        charback3.position = CGPoint(x: -200, y: -100)
+        charback3.zPosition = -1
+        charback4.position = CGPoint(x: 200, y: -100)
+        charback4.zPosition = -1
         Platform.position = CGPoint(x: 0, y: -200)
         LeftWall.position = CGPoint(x: -450, y: 0)
         Left_Arrow.position = CGPoint(x: -300, y: -200)
@@ -112,7 +139,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         RightWall.position = CGPoint(x: 435, y: 0)
         jump_button.position = CGPoint(x: 200, y: -200)
         Punch_button.position = CGPoint(x: 300, y: -200)
-        backround.zPosition = -1
+        backround.zPosition = -2
     }
     
     func setup_game_scene(){
@@ -133,6 +160,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setup_main_menu(){
         self.removeAllChildren()
         addChild(Play_Button)
+        addChild(charbut1)
+        addChild(charbut2)
+        addChild(charbut3)
+        addChild(charbut4)
+        addChild(charback1)
+        addChild(charback2)
+        addChild(charback3)
+        addChild(charback4)
     }
     
    
@@ -175,6 +210,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if Player.x_direction != "" && Player.position.y < 0{
             addEmiter(loc: CGPoint(x: Player.position.x, y: Player.position.y-Player.size.height/2), file: "PlayerWalkDust")
         }
+        switch cn {
+        case 1:
+            charback1.color = UIColor.cyan
+            charback2.color = UIColor.yellow
+            charback3.color = UIColor.yellow
+            charback4.color = UIColor.yellow
+            break
+        case 2:
+            charback1.color = UIColor.yellow
+            charback2.color = UIColor.cyan
+            charback3.color = UIColor.yellow
+            charback4.color = UIColor.yellow
+            break
+        case 3:
+            charback1.color = UIColor.yellow
+            charback2.color = UIColor.yellow
+            charback3.color = UIColor.cyan
+            charback4.color = UIColor.yellow
+            break
+        case 4:
+            charback1.color = UIColor.yellow
+            charback2.color = UIColor.yellow
+            charback3.color = UIColor.yellow
+            charback4.color = UIColor.cyan
+        default:
+            charback1.color = UIColor.yellow
+            charback2.color = UIColor.yellow
+            charback3.color = UIColor.yellow
+            charback4.color = UIColor.yellow
+            break
+        }
     }
     
     func buttonPress(touch: UITouch){
@@ -215,6 +281,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if self.Punch_button.contains(location){
                     self.Punch_button.alpha = 0.5
                     print("punch")
+                }
+            }else if node.name == "charback1"{
+                if self.charback1.contains(location){
+                    self.cn = 1
+                    print("cn1")
+                }
+            }else if node.name == "charback2"{
+                if self.charback2.contains(location){
+                    self.cn = 2
+                    print("cn2")
+                }
+            }else if node.name == "charback3"{
+                if self.charback3.contains(location){
+                    self.cn = 3
+                    print("cn3")
+                }
+            }else if node.name == "charback4"{
+                if self.charback4.contains(location){
+                    self.cn = 4
+                    print("cn4")
                 }
             }
         }

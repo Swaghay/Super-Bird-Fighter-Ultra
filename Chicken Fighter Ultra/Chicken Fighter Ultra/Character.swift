@@ -94,7 +94,7 @@ class Character:SKSpriteNode{
                 self.physicsBody?.velocity.dx += x_acc
                 if (!isWalk){
                     self.removeAllActions()
-                    setTexture(folderName: "gooseMove", sprite: self, spriteName: "goose_walk",speed: 100)
+                    setTexture(folderName: run_animation_folder_name, sprite: self, spriteName: run_animation_sprite_name,speed: 100)
                     self.xScale = 1
                     isWalk = true
                 }
@@ -104,7 +104,7 @@ class Character:SKSpriteNode{
                 self.physicsBody?.velocity.dx -= x_acc
                 if (!isWalk){
                     self.removeAllActions()
-                    setTexture(folderName: "gooseMove", sprite: self, spriteName: "goose_walk",speed: 100)
+                    setTexture(folderName: run_animation_folder_name, sprite: self, spriteName: run_animation_sprite_name,speed: 100)
                     self.xScale = -1
                     isWalk = true
                 }
@@ -117,7 +117,7 @@ class Character:SKSpriteNode{
             }
             if (!isFly){
                 self.removeAllActions()
-                setTexture(folderName: "goose_flying_good", sprite: self, spriteName: "goose_flying",speed: 15)
+                setTexture(folderName: fly_animation_folder_name, sprite: self, spriteName: fly_animation_sprite_name,speed: 15)
                 isWalk = false
                 isFly = true
             }
