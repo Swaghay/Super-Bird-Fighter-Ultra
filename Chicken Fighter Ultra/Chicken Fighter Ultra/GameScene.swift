@@ -38,12 +38,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var Play_Button = SKSpriteNode()
     
     override func didMove(to view: SKView) {
+        Player.setvalues(jumps: 2, jump_vel: 200, max_x_speed: 200, acc: 200, size: CharacterSize)
+        Player.setAnimations(run_sprite: "goose_walk", run_folder: "gooseMove", fly_sprite:"goose_flying" , fly_folder: "goose_flying_good", attack_sprite: "", attack_folder: "")
         setup()
     }
     
     func setup(){
-        Player.setvalues(jumps: 2, jump_vel: 200, max_x_speed: 200, acc: 200, size: CharacterSize)
-        Player.setAnimations(run_sprite: "goose_walk", run_folder: "gooseMove", fly_sprite:"goose_flying" , fly_folder: "goose_flying_good", attack_sprite: "", attack_folder: "")
+       
         set_names()
         set_textures()
         set_sizes()
@@ -81,6 +82,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         set_filtering_mode(fileNamed: "farmyard", node: backround)
         set_filtering_mode(fileNamed: "Punch Button", node: Punch_button)
         set_filtering_mode(fileNamed: "dummy", node: dummy)
+        set_filtering_mode(fileNamed: "goose_stand", node: charbut1)
+        set_filtering_mode(fileNamed: "penguin_walk0", node: charbut2)
+        set_filtering_mode(fileNamed: "Chickette", node: charbut3)
+        set_filtering_mode(fileNamed: "Chickette", node: charbut4)
     }
     
     func set_sizes(){
@@ -90,6 +95,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         Play_Button.size = buttonSize
         jump_button.size = buttonSize
         Punch_button.size = buttonSize
+        charbut1.size = CGSize(width: 80, height: 80)
+        charbut2.size = CGSize(width: 80, height: 80)
+        charbut3.size = CGSize(width: 80, height: 80)
+        charbut4.size = CGSize(width: 80, height: 80)
         dummy.size = CharacterSize
         backround.size = CGSize(width: 1000, height: 800)
     }
@@ -124,6 +133,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func set_positions(){
         Play_Button.position = CGPoint(x: 0, y: -200)
+        
+        charbut1.position = CGPoint(x: -200, y: 100)
+        charbut1.zPosition = 0
+        charbut2.position = CGPoint(x: 200, y: 100)
+        charbut2.zPosition = 0
+        charbut3.position = CGPoint(x: -200, y: -100)
+        charbut3.zPosition = 0
+        charbut4.position = CGPoint(x: 200, y: -100)
+        charbut4.zPosition = 0
+        
         charback1.position = CGPoint(x: -200, y: 100)
         charback1.zPosition = -1
         charback2.position = CGPoint(x: 200, y: 100)
@@ -144,6 +163,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func setup_game_scene(){
         self.removeAllChildren()
+        if cn == 1{
+            Player.setvalues(jumps: 2, jump_vel: 200, max_x_speed: 200, acc: 200, size: CharacterSize)
+            Player.setAnimations(run_sprite: "goose_walk", run_folder: "gooseMove", fly_sprite:"goose_flying" , fly_folder: "goose_flying_good", attack_sprite: "", attack_folder: "")
+        }else if cn == 2{
+            Player.setvalues(jumps: 2, jump_vel: 200, max_x_speed: 200, acc: 200, size: CharacterSize)
+            Player.setAnimations(run_sprite: "penguin_walk", run_folder: "Penguin_Walk", fly_sprite:"penguin_jump" , fly_folder: "Penguin_Jump", attack_sprite: "", attack_folder: "")
+        }else if cn == 3{
+            Player.setvalues(jumps: 2, jump_vel: 200, max_x_speed: 200, acc: 200, size: CharacterSize)
+            Player.setAnimations(run_sprite: "goose_walk", run_folder: "gooseMove", fly_sprite:"goose_flying" , fly_folder: "goose_flying_good", attack_sprite: "", attack_folder: "")
+        }else if cn == 4{
+            Player.setvalues(jumps: 2, jump_vel: 200, max_x_speed: 200, acc: 200, size: CharacterSize)
+            Player.setAnimations(run_sprite: "goose_walk", run_folder: "gooseMove", fly_sprite:"goose_flying" , fly_folder: "goose_flying_good", attack_sprite: "", attack_folder: "")
+        }
         addChild(Platform)
         addChild(Player)
         addChild(Left_Arrow)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		765ECADD256C19C100E7AC78 /* Penguin_Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 765ECADC256C19C100E7AC78 /* Penguin_Jump.atlas */; };
+		765ECAE0256C19CD00E7AC78 /* Penguin_Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 765ECADF256C19CD00E7AC78 /* Penguin_Walk.atlas */; };
 		767E3A5125657C5D00840448 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767E3A5025657C5D00840448 /* Character.swift */; };
 		768A2F0B2549C3C700121FBD /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */; };
 		76968C692566CB2000AAF305 /* goose_flying_good.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 76968C682566CB2000AAF305 /* goose_flying_good.atlas */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		765ECADC256C19C100E7AC78 /* Penguin_Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Penguin_Jump.atlas; path = ../../../../../Downloads/Penguin_Jump.atlas; sourceTree = "<group>"; };
+		765ECADF256C19CD00E7AC78 /* Penguin_Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Penguin_Walk.atlas; path = ../../../../../Downloads/Penguin_Walk.atlas; sourceTree = "<group>"; };
 		767E3A5025657C5D00840448 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		768A2F0A2549C3C700121FBD /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
 		76968C682566CB2000AAF305 /* goose_flying_good.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = goose_flying_good.atlas; path = ../../../../../Desktop/goose_flying_good.atlas; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		76E35F96254719FA00726ADA /* Chicken Fighter Ultra */ = {
 			isa = PBXGroup;
 			children = (
+				765ECADF256C19CD00E7AC78 /* Penguin_Walk.atlas */,
+				765ECADC256C19C100E7AC78 /* Penguin_Jump.atlas */,
 				76968C6B2566CB3F00AAF305 /* gooseMove.atlas */,
 				76968C682566CB2000AAF305 /* goose_flying_good.atlas */,
 				76E35F97254719FA00726ADA /* AppDelegate.swift */,
@@ -147,8 +153,10 @@
 				76F62151254BB61800703779 /* PlayerWalkDust.sks in Resources */,
 				76E35F9A254719FA00726ADA /* GameScene.sks in Resources */,
 				76968C6C2566CB3F00AAF305 /* gooseMove.atlas in Resources */,
+				765ECAE0256C19CD00E7AC78 /* Penguin_Walk.atlas in Resources */,
 				76E35FA5254719FD00726ADA /* Assets.xcassets in Resources */,
 				76E35F9C254719FA00726ADA /* Actions.sks in Resources */,
+				765ECADD256C19C100E7AC78 /* Penguin_Jump.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -287,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
